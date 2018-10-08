@@ -4,15 +4,7 @@ from models.enums.methodstype import MethodsType
 from models.methods.method import Method
 
 class Euler(Method):
-
-	def __init__(self, type, y, t, stepsSize, steps, function):
-		self.type = type
-		self.y = y
-		self.t = t
-		self.stepsSize = stepsSize
-		self.steps = steps
-		self.function = sympify(function)
-
+	
 	def calculate(self):
 		for i in range(1, self.steps + 1):
 			v = (0, 0)
@@ -43,4 +35,3 @@ class Euler(Method):
 		predictionNextY = self.calculateByEuler(previousY, previousT)[1]
 		nextY = previousY + self.stepsSize * (float(self.function.subs([("y", previousY), ("t", previousT)])) + float(self.function.subs([("y", predictionNextY), ("t", nextT)])))/2
 		return (nextT, nextY)
-		
