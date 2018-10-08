@@ -12,7 +12,7 @@ class Input:
 		self.file = file
 		self.methods = []
 
-	def assembleMethods(self):
+	def parseAndAssembleMethods(self):
 		f = open(self.file, "r")
 
 		for line in f:
