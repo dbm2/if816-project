@@ -1,7 +1,7 @@
 import sys
 from sympy import sympify
-from models.enums.methodstype import MethodsType
-from models.methods.method import Method
+from enums.methodstype import MethodsType
+from models.method import Method
 
 class InversedFormula(Method):
 

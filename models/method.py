@@ -1,6 +1,6 @@
 import sys
 from sympy import sympify
-from models.enums.methodstype import MethodsType
+from enums.methodstype import MethodsType
 
 class Method:
 
@@ -11,3 +11,6 @@ class Method:
 		self.stepsSize = stepsSize
 		self.steps = steps
 		self.function = sympify(function)
+
+	def evaluateFunction(self, forY, forT):
+		return float(self.function.subs([("y", forY), ("t", forT)]))

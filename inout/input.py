@@ -1,9 +1,9 @@
 import sys
-from models.enums.methodstype import MethodsType
+from enums.methodstype import MethodsType
 from models.methods.euler import Euler
 from models.methods.rungekutta import RungeKutta
-from models.methods.adambashforth import AdamBashForth
-from models.methods.adammulton import AdamMulton
+from models.methods.adamsbashforth import AdamsBashForth
+from models.methods.adamsmoulton import AdamsMoulton
 from models.methods.inversedformula import InversedFormula
 
 class Input:
@@ -32,12 +32,14 @@ class Input:
 				self.methods.append(Euler(methodType, y, t, stepsSize, steps, function))
 			elif methodType.isRungeKutta():
 				self.methods.append(RungeKutta(methodType, y, t, stepsSize, steps, function))
-			elif methodType.isAdamBashForth():
-				self.methods.append(AdamBashForth(methodType, y, t, stepsSize, steps, function, order))
-			elif methodType.isAdamMulton():
-				self.methods.append(AdamMulton(methodType, y, t, stepsSize, steps, function, order))
+			elif methodType.isAdamsBashForth():
+				self.methods.append(AdamsBashForth(methodType, y, t, stepsSize, steps, function, order))
+			elif methodType.isAdamsMoulton():
+				self.methods.append(AdamsMoulton(methodType, y, t, stepsSize, steps, function, order))
 			elif methodType.isInversedFormula():
 				self.methods.append(InversedFormula(methodType, y, t, stepsSize, steps, function, order))
+
+		f.close()
 
 	@classmethod
 	def _splitStringsFromLine(self, line):
