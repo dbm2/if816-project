@@ -1,65 +1,71 @@
 # if816-project
 
-Autor: Daniel Barbosa Maranhão | 107.698.344-85
-Login: dbm2 
-Data: 18/10/2018
+**Autor:** Daniel Barbosa Maranhão | 107.698.344-85
+**Login: ** dbm2 
+**Data:** 18/10/2018
 
----------------- DESCRIÇÃO ------------------
+### Descrição
 Projeto de métodos númericos que recebe como entrada um arquivo com métodos a serem calculados e gera um arquivo de saída com as respectivas respostas.
 
----------------- BIBLÍOTECAS ----------------
+### Biblíotecas
 mpmath, sympy e matplotlib.
 
----------------- SISTEMA OP. ----------------
+### Sistema Operacional
 O programa foi desenvolvido no Windows 10 e testado apenas nele. Qualquer problema me fala!!
 
----------------- PREPARAÇÃO -----------------
+### Preparação
 Para poder executar o programa é necessário instalar as bibliotecas utilizadas.
-Para isso, navege pelo terminal até a pasta em que o projeto está e execute o seguinte comando: "pip install -r requirements.txt"
+Para isso, navege pelo terminal até a pasta em que o projeto está e execute o seguinte comando: 
+```sh
+$ pip install -r requirements.txt
+```
 
----------------- EXECUÇÃO -------------------
-Para executar o programa, navege pelo terminal até a pasta em que o projeto está e execute o seguinte comando: "python -u project.py"
+### Execução
+Para executar o programa, navege pelo terminal até a pasta em que o projeto está e execute o seguinte comando:
+```sh
+$ python -u project.py
+```
 
----------------- ENTRADA --------------------
+### Entrada
 O arquivo de entrada com os métodos que serão calculados ficam em "/resources/entrada.txt".
 Como foi especificado, os métodos de entrada sempre seguirão um dos seguintes padrões abaixo:
-	- nome_do_metodo y0 t0 h passos função
-	- nome_do_metodo y's t0 h passos função ordem
-	- nome_do_metodo y0 t0 h passos função ordem
+  - nome_do_metodo y0 t0 h passos função
+  - nome_do_metodo y's t0 h passos função ordem
+  - nome_do_metodo y0 t0 h passos função ordem
 
 Exemplos de entradas válidas:
-	- euler 0 0 0.1 20 1-t+4*y
-	- adam_bashforth 0.0 0.1 0.23 0.402 0.6328 0 0.1 20 1-t+4*y 5
-	- adam_multon_by_euler_aprimorado 0 0 0.1 20 1-t+4*y 6
-	- formula_inversa_by_runge_kutta 0 0 0.1 20 1-t+4*y 6
+  - euler 0 0 0.1 20 1-t+4*y
+  - adam_bashforth 0.0 0.1 0.23 0.402 0.6328 0 0.1 20 1-t+4*y 5
+  - adam_multon_by_euler_aprimorado 0 0 0.1 20 1-t+4*y 6
+  - formula_inversa_by_runge_kutta 0 0 0.1 20 1-t+4*y 6
 
 Observação: eu deixei o arquivo de entrada com todos os métodos exemplos da especificação. Pode executar assim se desejar.
 
----------------- SAÍDA ----------------------
+### Saída
 As respostas dos métodos de entrada serão gravadas no arquivo "/resources/saida.txt" seguindo o padrão especificado.
 Além disso, os gráficos para os métodos serão gerados dentro da pasta "/resources/charts". Serão gerados tanto gráficos individuais (seguindo o padrão de nome "chart_nome_do_metodo.png") quanto um gráfico geral com todos métodos (com o nome "chart_all.png")
 
 Exemplo de saída:
-	Metodo de Euler
-	y(0.0) = 0.0
-	h = 0.1
-	1 0.1
-	2 0.22999999999999998
-	3 0.402
-	4 0.6328
-	5 0.9459200000000001
-	6 1.3742880000000002
-	7 1.9640032000000003
-	8 2.7796044800000006
-	9 3.911446272000001
-	10 5.486024780800001
-	11 7.680434693120002
-	12 10.742608570368002
-	13 15.019651998515204
-	14 20.99751279792129
-	15 29.356517917089803
-	16 41.04912508392572
-	17 57.40877511749601
-	18 80.30228516449442
-	19 112.34319923029219
-	20 157.19047892240906
+> Metodo de Euler
+> y(0.0) = 0.0
+> h = 0.1
+> 1 0.1
+> 2 0.22999999999999998
+> 3 0.402
+> 4 0.6328
+> 5 0.9459200000000001
+> 6 1.3742880000000002
+> 7 1.9640032000000003
+> 8 2.7796044800000006
+> 9 3.911446272000001
+> 10 5.486024780800001
+> 11 7.680434693120002
+> 12 10.742608570368002
+> 13 15.019651998515204
+> 14 20.99751279792129
+> 15 29.356517917089803
+> 16 41.04912508392572
+> 17 57.40877511749601
+> 18 80.30228516449442
+> 19 112.34319923029219
+> 20 157.19047892240906
