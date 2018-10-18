@@ -10,6 +10,9 @@ Projeto de métodos númericos que recebe como entrada um arquivo com métodos a
 ### Biblíotecas
 mpmath, sympy e matplotlib.
 
+### Linguagem
+Python 3.7.0.
+
 ### Sistema Operacional
 O programa foi desenvolvido no Windows 10 e testado apenas nele. Qualquer problema me fala!!
 
