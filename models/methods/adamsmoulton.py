@@ -56,6 +56,9 @@ class AdamsMoulton(Method):
 
 			v = self.calculateByAdamsMoulton(previousYs, previousTs)
 
+			previousYs = previousYs[:-1]
+			previousTs = previousTs[:-1]
+
 			self.t.append(v[0])
 			self.y.append(v[1])
 
@@ -69,10 +72,7 @@ class AdamsMoulton(Method):
 			f = self.evaluateFunction(y, t)
 			previousFunctionsEvaluations += (AdamsMoulton.coefficients[self.order - 1][i] * f)
 
-		previousYs = previousYs[:-1]
-		previousTs = previousTs[:-1]
-
-		nextT = previousTs[-1] + self.stepsSize
-		nextY = previousYs[-1] + self.stepsSize * previousFunctionsEvaluations
+		nextT = previousTs[-2] + self.stepsSize
+		nextY = previousYs[-2] + self.stepsSize * previousFunctionsEvaluations
 
 		return (nextT, nextY)

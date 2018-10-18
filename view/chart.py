@@ -21,7 +21,7 @@ class Chart:
 
 		ax.legend()
 		
-		fig.savefig('resources/chart.png', dpi=100)
+		fig.savefig('resources/charts/chart_all.png', dpi=100)
 
 
 	def drawForEachMethod(self):

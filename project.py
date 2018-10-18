@@ -24,7 +24,3 @@ view.drawForEachMethod()
 view.drawForAllMethods()
 
 print("Pronto!")
-
-
-
-
